@@ -1,0 +1,459 @@
+/* ==========================================================================
+   Global Variables & Design Tokens (Sampled directly from Logo.png)
+   ========================================================================== */
+:root {
+  /* Exact Logo Colors: Midnight Navy & Golden Warm Yellow */
+  --primary-color: #141f27;
+  --primary-rgb: 20, 31, 39;
+  --primary-hover: #0a1116;
+  
+  --secondary-color: #fec503;
+  --secondary-rgb: 254, 197, 3;
+  --secondary-hover: #e5b000;
+
+  /* Navigation Tokens */
+  --nav-text: #141f27;
+  --nav-text-hover: var(--primary-color);
+  --nav-active-color: #ffffff;
+  --nav-active-bg: var(--primary-color);
+  --nav-active-border: var(--secondary-color);
+  --nav-bg: #ffffff;
+  --nav-border: #e2e8f0;
+
+  /* Breadcrumbs Section Tokens */
+  --bc-bg: #f8fafc;
+  --bc-border: #e2e8f0;
+  --bc-title-color: #141f27;
+  --bc-link-color: #64748b;
+  --bc-link-hover: #d99f00;
+  --bc-active-color: #141f27;
+  --bc-sep-color: #94a3b8;
+  --bc-desc-color: #64748b;
+}
+
+/* ==========================================================================
+   Main Navbar Component (Strictly NO padding & NO height on main navbar)
+   ========================================================================== */
+.main-navbar {
+  padding: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.main-navbar .nav-logo {
+  max-height: 52px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.main-navbar .nav-logo:hover {
+  transform: scale(1.03);
+}
+
+/* Nav Links - Modern Rounded Pill & Hover Effects */
+.main-navbar .navbar-nav .nav-link {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 8px 14px;
+  margin: 12px 2px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.main-navbar .navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+  background-color: rgba(var(--primary-rgb), 0.08);
+}
+
+.main-navbar .navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  background-color: var(--primary-color);
+  box-shadow: 0 3px 10px rgba(var(--primary-rgb), 0.3);
+}
+
+.main-navbar .nav-link .nav-arrow {
+  font-size: 0.72rem;
+  transition: transform 0.2s ease;
+}
+
+.main-navbar .dropdown:hover .nav-link .nav-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Styling - Floating Modern Card */
+@media (min-width: 992px) {
+  .main-navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.main-navbar .dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 3px solid var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 230px;
+  margin-top: 0;
+  animation: navDropdownFade 0.2s ease forwards;
+}
+
+@keyframes navDropdownFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.main-navbar .dropdown-item {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1e293b;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.15s ease;
+}
+
+.main-navbar .dropdown-item i {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  transition: transform 0.15s ease;
+}
+
+.main-navbar .dropdown-item:hover {
+  background-color: rgba(var(--primary-rgb), 0.08);
+  color: var(--primary-color);
+  padding-left: 18px;
+}
+
+.main-navbar .dropdown-item:hover i {
+  color: #b58900;
+  transform: scale(1.15);
+}
+
+.main-navbar .dropdown-item.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.main-navbar .dropdown-item.active i {
+  color: var(--secondary-color);
+}
+
+/* Call Widget & CTA Quote Button */
+.nav-call-widget {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 4px 14px 4px 4px;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.nav-call-widget:hover {
+  border-color: var(--primary-color);
+  background: rgba(var(--primary-rgb), 0.04);
+  transform: translateY(-1px);
+}
+
+.call-pulse-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--secondary-color);
+  color: #141f27;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(var(--secondary-rgb), 0.35);
+  transition: all 0.2s ease;
+}
+
+.nav-call-widget:hover .call-pulse-icon {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.call-subtitle {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #64748b;
+  line-height: 1;
+}
+
+.call-number {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.25;
+}
+
+.btn-quote-cta {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #f5b700 100%) !important;
+  border: none !important;
+  color: #141f27 !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(var(--secondary-rgb), 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-quote-cta:hover {
+  background: linear-gradient(135deg, var(--secondary-hover) 0%, #e0a200 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--secondary-rgb), 0.55);
+  color: #141f27 !important;
+}
+
+.btn-cta-arrow {
+  background: rgba(20, 31, 39, 0.15);
+  color: #141f27;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-quote-cta:hover .btn-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* Mobile Quick Action Buttons */
+.mobile-action-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: transform 0.15s ease;
+}
+
+.mobile-action-btn:active {
+  transform: scale(0.92);
+}
+
+.mobile-call-btn {
+  background-color: var(--secondary-color);
+  color: #141f27;
+}
+
+.mobile-wa-btn {
+  background-color: rgba(37, 211, 102, 0.14);
+  color: #25d366;
+}
+
+/* Mobile Offcanvas Drawer Custom Details */
+.offcanvas-nav-link {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1e293b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.offcanvas-nav-link:hover,
+.offcanvas-nav-link.active {
+  background-color: rgba(var(--primary-rgb), 0.08);
+  color: var(--primary-color);
+}
+
+.offcanvas-accordion-btn {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1e293b;
+  background: none;
+  border: none;
+  padding: 10px 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.offcanvas-accordion-btn:not(.collapsed) {
+  background-color: rgba(var(--primary-rgb), 0.08);
+  color: var(--primary-color);
+}
+
+.offcanvas-sublink {
+  font-size: 0.9rem;
+  color: #4b5563;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.offcanvas-sublink:hover,
+.offcanvas-sublink.active {
+  color: var(--primary-color);
+  background-color: rgba(var(--primary-rgb), 0.06);
+}
+
+
+/* ==========================================================================
+   Breadcrumbs Section - Minimal & Clean Design
+   ========================================================================== */
+.dynamic-bc-section,
+.service-breadcrumbs,
+.site-breadcrumb,
+.page_breadcrumbs {
+  background-color: var(--bc-bg);
+  border-bottom: 1px solid var(--bc-border);
+  padding: 22px 0;
+  position: relative;
+  width: 100%;
+}
+
+.dynamic-bc-section .dyn-bc-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.dynamic-bc-section .dyn-bc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dynamic-bc-section .dyn-bc-title,
+.service-breadcrumbs h1,
+.site-breadcrumb .breadcrumb-title,
+.page_breadcrumbs h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bc-title-color);
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.dynamic-bc-section .dyn-bc-desc,
+.service-breadcrumbs .bc-desc {
+  font-size: 0.875rem;
+  color: var(--bc-desc-color);
+  margin: 0;
+  line-height: 1.5;
+  max-width: 650px;
+}
+
+/* Breadcrumb Navigation Trail */
+.dyn-bc-nav,
+.bc-nav,
+.breadcrumb-menu,
+.page_breadcrumbs .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dyn-bc-nav a,
+.bc-nav a,
+.breadcrumb-menu a,
+.page_breadcrumbs .breadcrumb a {
+  color: var(--bc-link-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.dyn-bc-nav a:hover,
+.bc-nav a:hover,
+.breadcrumb-menu a:hover,
+.page_breadcrumbs .breadcrumb a:hover {
+  color: var(--bc-link-hover);
+}
+
+.dyn-bc-sep,
+.bc-sep {
+  color: var(--bc-sep-color);
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.dyn-bc-current,
+.bc-current,
+.breadcrumb-menu .active,
+.page_breadcrumbs .breadcrumb .active {
+  color: var(--bc-active-color);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+@media (max-width: 768px) {
+  .dynamic-bc-section,
+  .service-breadcrumbs,
+  .site-breadcrumb,
+  .page_breadcrumbs {
+    padding: 16px 0;
+  }
+
+  .dynamic-bc-section .dyn-bc-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dynamic-bc-section .dyn-bc-title,
+  .service-breadcrumbs h1,
+  .site-breadcrumb .breadcrumb-title,
+  .page_breadcrumbs h1 {
+    font-size: 1.25rem;
+  }
+
+  .dyn-bc-nav,
+  .bc-nav,
+  .breadcrumb-menu,
+  .page_breadcrumbs .breadcrumb {
+    font-size: 0.8125rem;
+    gap: 6px;
+  }
+}
