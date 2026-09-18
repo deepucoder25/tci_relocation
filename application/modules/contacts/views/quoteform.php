@@ -7,102 +7,82 @@
             
             <div class="hero-quote-white-card">
               <!-- Card Body / Form -->
-              <div class="card-body-form">
-                <form id="quoteform" class="ajax-form" data-url="<?php echo site_url('contacts/booking') ?>" data-result="quoteformresults" onsubmit="return false;">
+              <form id="quoteform" class="ajax-form" data-url="<?php echo site_url('contacts/booking') ?>" data-result="quoteformresults" onsubmit="return false;">
+                
+                <div class="row g-2 g-sm-3">
+                  <!-- Name Input -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating quote-form-floating">
+                      <input type="text" class="form-control" id="heroName" name="name" placeholder=" " required>
+                      <label for="heroName"><i class="bi bi-person"></i> Full Name *</label>
+                    </div>
+                  </div>
                   
-                  <div class="form-row-custom">
-                    <!-- Name Input -->
-                    <div class="input-wrap-custom">
-                      <i class="bi bi-person input-icon-custom"></i>
-                      <input type="text" name="name" class="form-control-custom" placeholder="Your Name" >
+                  <!-- Phone Input -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating quote-form-floating">
+                      <input type="tel" class="form-control" id="heroPhone" name="phone" placeholder=" " required>
+                      <label for="heroPhone"><i class="bi bi-telephone"></i> Mobile Number *</label>
                     </div>
-                    
-                    <!-- Phone Input -->
-                    <div class="input-wrap-custom">
-                      <i class="bi bi-telephone input-icon-custom"></i>
-                      <input type="tel" name="phone" class="form-control-custom" placeholder="Phone Number" >
+                  </div>
+                  
+                  <!-- Email Input -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating quote-form-floating">
+                      <input type="email" class="form-control" id="heroEmail" name="email" placeholder=" ">
+                      <label for="heroEmail"><i class="bi bi-envelope"></i> Email Address</label>
                     </div>
-                    
-                    <!-- Email Input -->
-                    <div class="input-wrap-custom">
-                      <i class="bi bi-envelope input-icon-custom"></i>
-                      <input type="email" name="email" class="form-control-custom" placeholder="Email Address" >
-                    </div>
-                    
-                    <!-- Select Service -->
-                    <div class="input-wrap-custom select-wrap-custom">
-                      <span class="select-label-custom">Select Service</span>
-                      <select name="mtype" class="form-select-custom" >
-                        <option value="" disabled selected>Select Service</option>
-                        <option>Household Relocation</option>
-                        <option>Office Relocation</option>
-                        <option>Car/Bike Shifting</option>
-                        <option>Warehousing</option>
+                  </div>
+                  
+                  <!-- Select Service -->
+                  <div class="col-12 col-sm-6">
+                    <div class="form-floating quote-form-floating">
+                      <select class="form-select" id="heroService" name="mtype" aria-label="Select Service">
+                        <option value="" disabled selected hidden></option>
+                        <option value="Household Shifting">Household Shifting</option>
+                        <option value="Office Relocation">Office Relocation</option>
+                        <option value="Car Transportation">Car Transportation</option>
+                        <option value="Bike Transportation">Bike Transportation</option>
+                        <option value="Packing &amp; Moving">Packing &amp; Moving</option>
+                        <option value="Loading &amp; Unloading">Loading &amp; Unloading</option>
+                        <option value="Warehousing &amp; Storage">Warehousing &amp; Storage</option>
                       </select>
+                      <label for="heroService"><i class="bi bi-truck"></i> Select Service</label>
                     </div>
-                    
-                    <!-- Moving From -->
-                    <div class="input-wrap-custom half-width-mobile">
-                      <i class="bi bi-geo-alt input-icon-custom"></i>
-                      <input type="text" name="mfrom" class="form-control-custom" value="<?= @$city ?>" placeholder="Moving From" >
+                  </div>
+                  
+                  <!-- Moving From -->
+                  <div class="col-6">
+                    <div class="form-floating quote-form-floating">
+                      <input type="text" class="form-control" id="heroFrom" name="mfrom" value="<?= @$city ?>" placeholder=" " required>
+                      <label for="heroFrom"><i class="bi bi-geo-alt"></i> Moving From *</label>
                     </div>
-                    
-                    <!-- Moving To -->
-                    <div class="input-wrap-custom half-width-mobile">
-                      <i class="bi bi-geo-alt input-icon-custom"></i>
-                      <input type="text" name="mto" class="form-control-custom" placeholder="Moving To" >
+                  </div>
+                  
+                  <!-- Moving To -->
+                  <div class="col-6">
+                    <div class="form-floating quote-form-floating">
+                      <input type="text" class="form-control" id="heroTo" name="mto" placeholder=" " required>
+                      <label for="heroTo"><i class="bi bi-geo"></i> Moving To *</label>
                     </div>
-                    
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn-submit-custom">
-                      <i class="bi bi-send submit-btn-icon-desktop"></i>
-                      <i class="bi bi-file-earmark-text submit-btn-icon-mobile"></i>
+                  </div>
+                  
+                  <!-- Submit Button -->
+                  <div class="col-12">
+                    <button type="submit" class="btn-submit-custom w-100">
+                      <i class="bi bi-send d-none d-sm-inline"></i>
+                      <i class="bi bi-file-earmark-text d-inline d-sm-none"></i>
                       <span>Get Quote</span>
                     </button>
                   </div>
-                  
-                  <div id="quoteformresults"></div>
-                </form>
-              </div>
+                </div>
+                
+                <div id="quoteformresults"></div>
+              </form>
               
-              <!-- Card Footer / Trust Badge Bar (Desktop Only) -->
-              <div class="card-footer-trust d-none d-lg-flex justify-content-between align-items-center">
-                <div class="trust-item">
-                  <i class="bi bi-shield-check trust-icon"></i>
-                  <div class="trust-text">
-                    <strong>100% Secure</strong>
-                    <span>Your data is safe with us</span>
-                  </div>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="trust-item">
-                  <i class="bi bi-clock trust-icon"></i>
-                  <div class="trust-text">
-                    <strong>Quick Response</strong>
-                    <span>We respond within 15 mins</span>
-                  </div>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="trust-item">
-                  <i class="bi bi-currency-rupee trust-icon-circle"></i>
-                  <div class="trust-text">
-                    <strong>Best Price Guarantee</strong>
-                    <span>Get the most competitive rates</span>
-                  </div>
-                </div>
-                <div class="divider-vertical"></div>
-                <div class="trust-item">
-                  <i class="bi bi-headset trust-icon"></i>
-                  <div class="trust-text">
-                    <strong>24/7 Support</strong>
-                    <span>We are here to help</span>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Mobile Security Tag (Mobile Only, Inside the Card) -->
-              <div class="mobile-security-tag d-flex d-lg-none justify-content-center align-items-center gap-2 py-3">
-                <i class="bi bi-shield-check text-primary"></i>
+              <!-- Security Tag (Card Footer) -->
+              <div class="mobile-security-tag d-flex justify-content-center align-items-center gap-2 py-3 mt-3">
+                <i class="bi bi-shield-check text-success fs-6"></i>
                 <span>100% Secure. We never share your data.</span>
               </div>
             </div>

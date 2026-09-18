@@ -116,7 +116,7 @@ $nav_schema = [
 
           <!-- About Us Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link <?= $active_tab === 'about' ? 'active' : '' ?>" href="<?= site_url('about-us') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link <?= $active_tab === 'about' ? 'active' : '' ?>" href="<?= site_url('about-us') ?>" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
               <span>About Us</span>
               <i class="bi bi-chevron-down nav-arrow"></i>
             </a>
@@ -133,7 +133,7 @@ $nav_schema = [
 
           <!-- Services Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link <?= $active_tab === 'services' ? 'active' : '' ?>" href="<?= site_url('our-services') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link <?= $active_tab === 'services' ? 'active' : '' ?>" href="<?= site_url('our-services') ?>" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
               <span>Services</span>
               <i class="bi bi-chevron-down nav-arrow"></i>
             </a>
