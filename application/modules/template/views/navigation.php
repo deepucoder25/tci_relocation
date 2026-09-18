@@ -1,17 +1,5 @@
 <body>
 <?php
-// Exact Brand Colors sampled directly from assets/img/logo/logo.png:
-// Primary: Deep Midnight Charcoal Navy (#141f27)
-// Secondary: Vibrant Golden Warm Yellow (#fec503)
-$primaryColor = '#141f27';
-$secondaryColor = '#fec503';
-
-// Contact & Company Variables
-$companyName = !empty($company3) ? $company3 : 'TCI Relocation Packers Movers';
-$phoneClean = !empty($phone) ? preg_replace('/[^0-9+]/', '', $phone) : '+917566809037';
-$phoneDisplay = !empty($phone) ? $phone : '+91 7566809037';
-$whatsappLink = !empty($whatsapphtml) ? $whatsapphtml : "https://wa.me/{$phoneClean}";
-$supportEmail = !empty($mail) ? $mail : (!empty($supportmail) ? $supportmail : 'support@mycompany.com');
 
 // Route & Active Tab Detection
 $ci =& get_instance();
@@ -43,14 +31,6 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
 }
 ?>
 
-<!-- Dynamic Brand Colors Variable Override -->
-<style>
-  :root {
-    --primary-color: <?= $primaryColor ?>;
-    --secondary-color: <?= $secondaryColor ?>;
-  }
-</style>
-
 <!-- SEO Friendly SiteNavigationElement Schema -->
 <?php
 $nav_schema = [
@@ -70,33 +50,34 @@ $nav_schema = [
 <?= json_encode($nav_schema, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) ?>
 </script>
 
-<!-- Top Branded Utility Bar (Desktop & Tablet) in Midnight Navy (#141f27) & Golden Yellow (#fec503) -->
-<div class="d-none d-lg-block py-1 text-white" style="background-color: var(--primary-color); font-size: 0.8125rem;">
-  <div class="container-xl d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center gap-3">
-      <a href="tel:<?= $phoneClean ?>" class="text-decoration-none text-white d-inline-flex align-items-center gap-1 opacity-90">
-        <i class="bi bi-telephone-inbound-fill" style="color: var(--secondary-color);"></i>
-        <span><?= $phoneDisplay ?></span>
+<!-- Top Branded Utility Bar (Visible & Fully Responsive across all screens) -->
+<div class="py-1 top-bar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2 gap-sm-3">
+      <a <?= $phonehtml ?> class="top-bar-link">
+        <i class="bi bi-telephone-inbound-fill top-bar-icon"></i>
+        <span><?= $phone ?></span>
       </a>
-      <span class="opacity-40">|</span>
-      <a href="mailto:<?= $supportEmail ?>" class="text-decoration-none text-white d-inline-flex align-items-center gap-1 opacity-90">
-        <i class="bi bi-envelope-open-fill" style="color: var(--secondary-color);"></i>
-        <span><?= $supportEmail ?></span>
+      <span class="top-bar-divider d-none d-sm-inline-block"></span>
+      <a href="<?= $mailhtml ?>" class="top-bar-link d-none d-sm-inline-flex">
+        <i class="bi bi-envelope-open-fill top-bar-icon"></i>
+        <span><?= $mail ?></span>
       </a>
-      <span class="opacity-40">|</span>
-      <span class="badge rounded-pill fw-bold px-2 py-1 shadow-sm" style="background-color: var(--secondary-color); color: #141f27; font-size: 0.72rem;">
-        <i class="bi bi-patch-check-fill me-1"></i>IBA Approved &amp; ISO Certified
+      <span class="top-bar-divider d-none d-md-inline-block"></span>
+      <span class="top-bar-badge d-none d-md-inline-flex">
+        <i class="bi bi-patch-check-fill"></i>
+        <span>IBA Approved &amp; ISO Certified</span>
       </span>
     </div>
 
-    <div class="d-flex align-items-center gap-3">
-      <a href="<?= $whatsappLink ?>" target="_blank" rel="noopener" class="text-decoration-none text-white d-inline-flex align-items-center gap-1 opacity-90">
-        <i class="bi bi-whatsapp text-success bg-white rounded-circle p-1" style="font-size: 0.75rem;"></i>
+    <div class="d-flex align-items-center gap-2 gap-sm-3">
+      <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="top-bar-link top-bar-whatsapp">
+        <i class="bi bi-whatsapp"></i>
         <span>WhatsApp 24/7</span>
       </a>
-      <span class="opacity-40">|</span>
-      <a href="<?= site_url('tracking') ?>" class="text-decoration-none text-white d-inline-flex align-items-center gap-1 opacity-90">
-        <i class="bi bi-box-seam" style="color: var(--secondary-color);"></i>
+      <span class="top-bar-divider d-none d-sm-inline-block"></span>
+      <a href="<?= site_url('tracking') ?>" class="top-bar-link top-bar-track d-none d-sm-inline-flex">
+        <i class="bi bi-box-seam top-bar-icon"></i>
         <span>Track Consignment</span>
       </a>
     </div>
@@ -106,32 +87,26 @@ $nav_schema = [
 <!-- Main Navbar (Strictly NO padding & NO height on main navbar) -->
 <header class="sticky-top shadow-sm">
   <nav class="navbar navbar-expand-lg main-navbar" id="mainNavbar">
-    <div class="container-xl d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-between main-nav-container py-1">
       
-      <!-- Brand Logo & Identity -->
-      <a class="navbar-brand d-flex align-items-center gap-2 my-0 me-3 py-1 text-decoration-none" href="<?= site_url() ?>">
-        <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($companyName) ?>" class="nav-logo img-fluid" style="height: 52px; width: auto;">
-        <div class="d-none d-sm-flex flex-column lh-1">
-          <span class="fw-bold fs-5 text-dark" style="letter-spacing: -0.5px;">TCI <span style="color: var(--secondary-color);">RELOCATION</span></span>
-          <span class="text-muted fw-semibold text-uppercase mt-1" style="font-size: 0.65rem; letter-spacing: 0.8px;">Safe &amp; Reliable Moving</span>
-        </div>
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none flex-shrink-0" href="<?= site_url() ?>">
+        <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($company3) ?>" class="nav-logo img-fluid">
       </a>
 
-      <!-- Mobile Quick Actions & Hamburger (Visible only on < lg screens) -->
-      <div class="d-flex align-items-center gap-2 d-lg-none">
-        <a href="tel:<?= $phoneClean ?>" class="mobile-action-btn mobile-call-btn" title="Call Helpline" aria-label="Call Helpline">
-          <i class="bi bi-telephone-fill"></i>
-        </a>
-        <a href="<?= $whatsappLink ?>" target="_blank" rel="noopener" class="mobile-action-btn mobile-wa-btn" title="WhatsApp Chat" aria-label="WhatsApp Chat">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-        <button class="navbar-toggler border-0 p-1 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas" aria-label="Toggle navigation" id="openMenu">
-          <i class="bi bi-list fs-1 text-dark"></i>
+      <!-- Mobile Actions (Get Quote + Hamburger Menu) (Visible only on < lg screens) -->
+      <div class="d-flex align-items-center gap-2 ms-auto d-lg-none">
+        <button type="button" class="btn btn-quote-cta btn-mobile-quote" data-bs-toggle="modal" data-bs-target="#qteModal">
+          <span>Get Quote</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+        <button class="navbar-toggler border-0 p-0 shadow-none mobile-nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navOffcanvas" aria-controls="navOffcanvas" aria-label="Toggle navigation" id="openMenu">
+          <i class="bi bi-list"></i>
         </button>
       </div>
 
-      <!-- Desktop Nav Items (Visible on >= lg screens) -->
-      <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="mainNavbarCollapse">
+      <!-- Desktop Nav Items & Action Buttons in one unified row with identical gap -->
+      <div class="collapse navbar-collapse d-none d-lg-flex align-items-center m-0" id="mainNavbarCollapse">
         <ul class="navbar-nav align-items-center my-0">
           
           <!-- Home -->
@@ -170,8 +145,6 @@ $nav_schema = [
               <li><a class="dropdown-item <?= in_array($segment1, ['packing-and-moving']) ? 'active' : '' ?>" href="<?= site_url('packing-and-moving') ?>"><i class="bi bi-box-seam"></i> Packing &amp; Moving</a></li>
               <li><a class="dropdown-item <?= in_array($segment1, ['loading-unloading']) ? 'active' : '' ?>" href="<?= site_url('loading-unloading') ?>"><i class="bi bi-arrow-down-up"></i> Loading &amp; Unloading</a></li>
               <li><a class="dropdown-item <?= in_array($segment1, ['storage-services', 'warehouse-and-storage']) ? 'active' : '' ?>" href="<?= site_url('storage-services') ?>"><i class="bi bi-shop"></i> Warehousing &amp; Storage</a></li>
-              <li><hr class="dropdown-divider my-1"></li>
-              <li><a class="dropdown-item fw-bold <?= $segment1 === 'our-services' ? 'active' : '' ?>" href="<?= site_url('our-services') ?>" style="color: var(--primary-color);"><i class="bi bi-grid-fill"></i> View All Services</a></li>
             </ul>
           </li>
 
@@ -180,12 +153,10 @@ $nav_schema = [
             <a class="nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>" href="<?= site_url('our-branches') ?>">Locations</a>
           </li>
 
-          <!-- Tracking with LIVE badge in Golden Yellow -->
+          <!-- Tracking -->
           <li class="nav-item">
             <a class="nav-link <?= $active_tab === 'tracking' ? 'active' : '' ?>" href="<?= site_url('tracking') ?>">
-              <i class="bi bi-geo-alt-fill" style="color: var(--secondary-color);"></i>
               <span>Track</span>
-              <span class="badge rounded-pill ms-1 fw-bold" style="background-color: var(--secondary-color); color: #141f27; font-size: 0.65rem;">LIVE</span>
             </a>
           </li>
 
@@ -200,26 +171,23 @@ $nav_schema = [
           </li>
 
         </ul>
-      </div>
 
-      <!-- Desktop Right Action Area -->
-      <div class="d-none d-lg-flex align-items-center gap-3">
         <!-- Call Widget -->
-        <a href="tel:<?= $phoneClean ?>" class="nav-call-widget text-decoration-none d-flex align-items-center gap-2">
+        <a <?= $phonehtml ?> class="nav-call-widget text-decoration-none d-flex align-items-center gap-2 m-0 text-nowrap flex-shrink-0">
           <span class="call-pulse-icon">
             <i class="bi bi-telephone-fill"></i>
           </span>
           <div class="d-flex flex-column text-start">
             <span class="call-subtitle">24x7 Helpline</span>
-            <span class="call-number"><?= $phoneDisplay ?></span>
+            <span class="call-number"><?= $phone ?></span>
           </div>
         </a>
 
         <!-- CTA Free Quote in Warm Golden Yellow from Logo -->
-        <a href="<?= site_url('contact-us') ?>" class="btn btn-quote-cta d-inline-flex align-items-center gap-2">
+        <button type="button" class="btn btn-quote-cta d-inline-flex align-items-center gap-2 m-0 text-nowrap flex-shrink-0" data-bs-toggle="modal" data-bs-target="#qteModal">
           <span>Get Free Quote</span>
           <span class="btn-cta-arrow"><i class="bi bi-arrow-right"></i></span>
-        </a>
+        </button>
       </div>
 
     </div>
@@ -230,9 +198,8 @@ $nav_schema = [
 <div class="offcanvas offcanvas-end" tabindex="-1" id="navOffcanvas" aria-labelledby="navOffcanvasLabel">
   <!-- Offcanvas Header -->
   <div class="offcanvas-header border-bottom py-3">
-    <a class="d-flex align-items-center gap-2 text-decoration-none" href="<?= site_url() ?>">
-      <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($companyName) ?>" style="height: 42px; width: auto;">
-      <span class="fw-bold text-dark fs-6">TCI <span style="color: var(--secondary-color);">RELOCATION</span></span>
+    <a class="d-flex align-items-center text-decoration-none" href="<?= site_url() ?>">
+      <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($company3) ?>" class="offcanvas-header-logo">
     </a>
     <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close" id="closeMenu"></button>
   </div>
@@ -243,13 +210,13 @@ $nav_schema = [
       
       <!-- Home -->
       <a href="<?= site_url() ?>" class="offcanvas-nav-link <?= $active_tab === 'home' ? 'active' : '' ?>">
-        <span><i class="bi bi-house-door me-2" style="color: var(--primary-color);"></i>Home</span>
+        <span><i class="bi bi-house-door me-2 offcanvas-icon-primary"></i>Home</span>
       </a>
 
       <!-- About Us Accordion -->
       <div class="my-1">
         <button class="offcanvas-accordion-btn <?= $active_tab === 'about' ? '' : 'collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#mobileAboutMenu" aria-expanded="<?= $active_tab === 'about' ? 'true' : 'false' ?>">
-          <span><i class="bi bi-building me-2" style="color: var(--primary-color);"></i>About Us</span>
+          <span><i class="bi bi-building me-2 offcanvas-icon-primary"></i>About Us</span>
           <i class="bi bi-chevron-down fs-6"></i>
         </button>
         <div class="collapse <?= $active_tab === 'about' ? 'show' : '' ?> ps-3 mt-1" id="mobileAboutMenu">
@@ -265,7 +232,7 @@ $nav_schema = [
       <!-- Services Accordion -->
       <div class="my-1">
         <button class="offcanvas-accordion-btn <?= $active_tab === 'services' ? '' : 'collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#mobileServicesMenu" aria-expanded="<?= $active_tab === 'services' ? 'true' : 'false' ?>">
-          <span><i class="bi bi-truck me-2" style="color: var(--primary-color);"></i>Services</span>
+          <span><i class="bi bi-truck me-2 offcanvas-icon-primary"></i>Services</span>
           <i class="bi bi-chevron-down fs-6"></i>
         </button>
         <div class="collapse <?= $active_tab === 'services' ? 'show' : '' ?> ps-3 mt-1" id="mobileServicesMenu">
@@ -276,29 +243,27 @@ $nav_schema = [
           <a href="<?= site_url('packing-and-moving') ?>" class="offcanvas-sublink"><i class="bi bi-box-seam"></i> Packing &amp; Moving</a>
           <a href="<?= site_url('loading-unloading') ?>" class="offcanvas-sublink"><i class="bi bi-arrow-down-up"></i> Loading &amp; Unloading</a>
           <a href="<?= site_url('storage-services') ?>" class="offcanvas-sublink"><i class="bi bi-shop"></i> Warehousing &amp; Storage</a>
-          <a href="<?= site_url('our-services') ?>" class="offcanvas-sublink fw-bold" style="color: var(--primary-color);"><i class="bi bi-grid-fill"></i> View All Services</a>
         </div>
       </div>
 
       <!-- Locations -->
       <a href="<?= site_url('our-branches') ?>" class="offcanvas-nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>">
-        <span><i class="bi bi-map me-2" style="color: var(--primary-color);"></i>Locations</span>
+        <span><i class="bi bi-map me-2 offcanvas-icon-primary"></i>Locations</span>
       </a>
 
       <!-- Track Order -->
       <a href="<?= site_url('tracking') ?>" class="offcanvas-nav-link <?= $active_tab === 'tracking' ? 'active' : '' ?>">
-        <span><i class="bi bi-geo-alt-fill me-2" style="color: var(--secondary-color);"></i>Track Order</span>
-        <span class="badge rounded-pill fw-bold" style="background-color: var(--secondary-color); color: #141f27; font-size: 0.7rem;">LIVE</span>
+        <span><i class="bi bi-geo-alt-fill me-2 offcanvas-icon-secondary"></i>Track Order</span>
       </a>
 
       <!-- Blog -->
       <a href="<?= site_url('blog') ?>" class="offcanvas-nav-link <?= $active_tab === 'blog' ? 'active' : '' ?>">
-        <span><i class="bi bi-journal-text me-2" style="color: var(--primary-color);"></i>Blog</span>
+        <span><i class="bi bi-journal-text me-2 offcanvas-icon-primary"></i>Blog</span>
       </a>
 
       <!-- Contact Us -->
       <a href="<?= site_url('contact-us') ?>" class="offcanvas-nav-link <?= $active_tab === 'contact' ? 'active' : '' ?>">
-        <span><i class="bi bi-chat-dots me-2" style="color: var(--primary-color);"></i>Contact Us</span>
+        <span><i class="bi bi-chat-dots me-2 offcanvas-icon-primary"></i>Contact Us</span>
       </a>
 
     </div>
@@ -306,21 +271,21 @@ $nav_schema = [
     <!-- Offcanvas Footer Contact Info & CTA -->
     <div class="border-top pt-3 mt-4">
       <div class="d-grid gap-2 mb-3">
-        <a href="<?= site_url('contact-us') ?>" class="btn btn-quote-cta py-2 text-center">
+        <button type="button" class="btn btn-quote-cta py-2 text-center" data-bs-toggle="modal" data-bs-target="#qteModal" data-bs-dismiss="offcanvas">
           Get Instant Free Quote <i class="bi bi-arrow-right ms-1"></i>
-        </a>
+        </button>
       </div>
       <div class="d-flex justify-content-around text-center py-2 bg-light rounded-3 mb-3">
-        <a href="tel:<?= $phoneClean ?>" class="text-decoration-none text-dark d-flex flex-column align-items-center">
-          <i class="bi bi-telephone-fill fs-5" style="color: var(--primary-color);"></i>
+        <a <?= $phonehtml ?> class="text-decoration-none text-dark d-flex flex-column align-items-center">
+          <i class="bi bi-telephone-fill fs-5 offcanvas-icon-primary"></i>
           <span class="small fw-semibold mt-1">Call Us</span>
         </a>
-        <a href="<?= $whatsappLink ?>" target="_blank" rel="noopener" class="text-decoration-none text-dark d-flex flex-column align-items-center">
+        <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="text-decoration-none text-dark d-flex flex-column align-items-center">
           <i class="bi bi-whatsapp fs-5 text-success"></i>
           <span class="small fw-semibold mt-1">WhatsApp</span>
         </a>
-        <a href="mailto:<?= $supportEmail ?>" class="text-decoration-none text-dark d-flex flex-column align-items-center">
-          <i class="bi bi-envelope-fill fs-5" style="color: #b58900;"></i>
+        <a href="<?= $mailhtml ?>" class="text-decoration-none text-dark d-flex flex-column align-items-center">
+          <i class="bi bi-envelope-fill fs-5 offcanvas-icon-amber"></i>
           <span class="small fw-semibold mt-1">Email</span>
         </a>
       </div>
@@ -381,6 +346,17 @@ $nav_schema = [
             btn.setAttribute('aria-expanded', 'true');
           }
         }
+      }
+    });
+  });
+
+  // Modal open helper to guarantee modal triggers reliably
+  document.querySelectorAll('[data-bs-target="#qteModal"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const modalEl = document.getElementById('qteModal');
+      if (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+        const modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modalInstance.show();
       }
     });
   });

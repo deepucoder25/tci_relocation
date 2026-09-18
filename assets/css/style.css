@@ -31,6 +31,114 @@
   --bc-desc-color: #64748b;
 }
 
+/* Top Bar Styles */
+.top-bar {
+  background-color: var(--primary-color, #141f27);
+  font-size: 0.8125rem;
+  color: #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.2px;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.top-bar-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.top-bar-link:hover {
+  color: var(--secondary-color, #fec503);
+}
+
+.top-bar-link .top-bar-icon {
+  color: var(--secondary-color, #fec503);
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+.top-bar-link:hover .top-bar-icon {
+  transform: scale(1.15);
+}
+
+.top-bar-divider {
+  width: 1px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Trust Pill Badge */
+.top-bar-badge {
+  background: rgba(254, 197, 3, 0.14);
+  border: 1px solid rgba(254, 197, 3, 0.4);
+  color: var(--secondary-color, #fec503);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2.5px 10px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.top-bar-badge:hover {
+  background: var(--secondary-color, #fec503);
+  color: #141f27;
+  border-color: var(--secondary-color, #fec503);
+  box-shadow: 0 2px 8px rgba(254, 197, 3, 0.3);
+}
+
+/* WhatsApp Accent */
+.top-bar-whatsapp i {
+  color: #25d366;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.top-bar-whatsapp:hover {
+  color: #25d366;
+}
+
+.top-bar-whatsapp:hover i {
+  transform: scale(1.2);
+}
+
+/* Track Consignment */
+.top-bar-track i {
+  color: var(--secondary-color, #fec503);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.top-bar-track:hover i {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 575px) {
+  .top-bar {
+    font-size: 0.75rem;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  .top-bar-link {
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+  .top-bar-link .top-bar-icon {
+    font-size: 0.8rem;
+  }
+}
+
 /* ==========================================================================
    Main Navbar Component (Strictly NO padding & NO height on main navbar)
    ========================================================================== */
@@ -43,43 +151,203 @@
 }
 
 .main-navbar .nav-logo {
-  max-height: 52px;
+  height: 80px;
+  max-height: 80px;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 
-.main-navbar .nav-logo:hover {
-  transform: scale(1.03);
+@media (max-width: 991px) {
+  .main-navbar .nav-logo {
+    height: 65px;
+    max-height: 80px;
+  }
 }
 
-/* Nav Links - Modern Rounded Pill & Hover Effects */
+@media (max-width: 575px) {
+  .main-navbar .nav-logo {
+    height: 70px;
+    max-height: 80px;
+  }
+}
+
+.main-navbar .nav-logo:hover {
+  transform: scale(1.02);
+}
+
+/* Uniform Gap Layout across every navbar item (Logo, Links, Call, Quote) */
+@media (min-width: 992px) {
+  .main-navbar .main-nav-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+  }
+
+  .main-navbar .navbar-collapse {
+    display: contents !important;
+  }
+
+  .main-navbar .navbar-nav {
+    display: contents !important;
+  }
+
+  .main-navbar .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+  }
+
+  .main-navbar .nav-item.dropdown {
+    position: relative !important;
+  }
+
+  .main-navbar .nav-call-widget,
+  .main-navbar .btn-quote-cta,
+  .main-navbar .navbar-brand {
+    flex: 0 0 auto !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-navbar .nav-logo {
+    height: 65px;
+    max-height: 65px;
+  }
+  .main-navbar .navbar-nav .nav-link {
+    font-size: 0.94rem !important;
+  }
+  .nav-call-widget {
+    padding: 4px 12px 4px 4px !important;
+  }
+  .call-pulse-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.9rem !important;
+  }
+  .call-subtitle {
+    font-size: 0.68rem !important;
+  }
+  .call-number {
+    font-size: 0.88rem !important;
+  }
+  .btn-quote-cta {
+    font-size: 0.92rem !important;
+    padding: 8px 16px !important;
+  }
+}
+
+/* Mobile Hamburger Menu Toggle Box */
+.mobile-nav-toggler {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  border: 1.5px solid rgba(254, 197, 3, 0.6) !important;
+  box-shadow: 0 2px 8px rgba(20, 31, 39, 0.08) !important;
+  color: var(--primary-color, #141f27) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+
+.mobile-nav-toggler:hover,
+.mobile-nav-toggler:focus,
+.mobile-nav-toggler:active {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #f5b700 100%) !important;
+  border-color: var(--secondary-color) !important;
+  color: #141f27 !important;
+  box-shadow: 0 4px 14px rgba(254, 197, 3, 0.42) !important;
+  transform: translateY(-1px) scale(1.05) !important;
+}
+
+.mobile-nav-toggler i {
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.mobile-nav-toggler:hover i {
+  transform: scale(1.1);
+}
+
+/* Mobile Header Quote CTA Button */
+.btn-mobile-quote {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border-radius: 50px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  box-shadow: 0 3px 12px rgba(254, 197, 3, 0.38) !important;
+}
+
+@media (max-width: 375px) {
+  .btn-mobile-quote {
+    font-size: 0.8rem !important;
+    padding: 7px 12px !important;
+  }
+}
+
+/* Offcanvas Drawer Elements */
+.offcanvas-header-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.offcanvas-icon-primary {
+  color: var(--primary-color);
+}
+
+.offcanvas-icon-secondary {
+  color: var(--secondary-color);
+}
+
+.offcanvas-icon-amber {
+  color: #b58900;
+}
+
+/* Nav Links - Clean Modern Text Styling with Uniform Gap */
 .main-navbar .navbar-nav .nav-link {
   color: #1e293b;
   font-weight: 600;
-  font-size: 0.92rem;
-  padding: 8px 14px;
-  margin: 12px 2px;
-  border-radius: 8px;
+  font-size: 1.05rem;
+  padding: 10px 0 !important;
+  margin: 0 !important;
+  white-space: nowrap;
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: all 0.2s ease;
+  background: transparent;
+  transition: color 0.2s ease, transform 0.15s ease;
 }
 
 .main-navbar .navbar-nav .nav-link:hover {
-  color: var(--primary-color);
-  background-color: rgba(var(--primary-rgb), 0.08);
+  color: #d49200;
+  background: transparent;
+  transform: translateY(-1px);
 }
 
 .main-navbar .navbar-nav .nav-link.active {
-  color: #ffffff !important;
-  background-color: var(--primary-color);
-  box-shadow: 0 3px 10px rgba(var(--primary-rgb), 0.3);
+  color: #d49200 !important;
+  font-weight: 700;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .main-navbar .nav-link .nav-arrow {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   transition: transform 0.2s ease;
 }
 
@@ -114,10 +382,10 @@
 }
 
 .main-navbar .dropdown-item {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #1e293b;
-  padding: 8px 14px;
+  padding: 9px 14px;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -127,7 +395,7 @@
 
 .main-navbar .dropdown-item i {
   color: var(--primary-color);
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: transform 0.15s ease;
 }
 
@@ -151,90 +419,157 @@
   color: var(--secondary-color);
 }
 
-/* Call Widget & CTA Quote Button */
+/* ==========================================================================
+   Call Button & Get Quote CTA - Animated & Enhanced Designs
+   ========================================================================== */
+
+/* Call Widget Capsule */
 .nav-call-widget {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 4px 14px 4px 4px;
+  background: #ffffff;
+  border: 1.5px solid rgba(254, 197, 3, 0.45);
+  padding: 5px 16px 5px 5px;
   border-radius: 50px;
-  transition: all 0.2s ease;
+  box-shadow: 0 3px 12px rgba(20, 31, 39, 0.05);
+  transition: all 0.25s ease;
+  position: relative;
 }
 
 .nav-call-widget:hover {
-  border-color: var(--primary-color);
-  background: rgba(var(--primary-rgb), 0.04);
-  transform: translateY(-1px);
+  border-color: var(--secondary-color);
+  background: #fffdf5;
+  box-shadow: 0 6px 18px rgba(254, 197, 3, 0.28);
+  transform: translateY(-2px);
 }
 
+/* Radar Pulse Ring on Phone Icon */
 .call-pulse-icon {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background: var(--secondary-color);
   color: #141f27;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 6px rgba(var(--secondary-rgb), 0.35);
-  transition: all 0.2s ease;
+  font-size: 1.05rem;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(254, 197, 3, 0.4);
+  animation: callWavePulse 2.2s infinite;
+  transition: all 0.25s ease;
+}
+
+@keyframes callWavePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(254, 197, 3, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(254, 197, 3, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(254, 197, 3, 0);
+  }
 }
 
 .nav-call-widget:hover .call-pulse-icon {
-  background: var(--primary-color);
-  color: #ffffff;
-  transform: scale(1.06);
+  background: #141f27;
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.nav-call-widget:hover .call-pulse-icon i {
+  display: inline-block;
+  animation: phoneWiggle 0.45s ease-in-out infinite alternate;
+}
+
+@keyframes phoneWiggle {
+  0% { transform: rotate(-14deg); }
+  100% { transform: rotate(14deg); }
 }
 
 .call-subtitle {
-  font-size: 0.68rem;
-  font-weight: 600;
+  font-size: 0.74rem;
+  font-weight: 700;
   color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   line-height: 1;
 }
 
 .call-number {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--primary-color);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #141f27;
   line-height: 1.25;
+  letter-spacing: -0.2px;
 }
 
+/* Get Free Quote CTA Button - Shimmering Gradient & Glow */
 .btn-quote-cta {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, #f5b700 100%) !important;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #f5b700 50%, #fec503 100%) !important;
   border: none !important;
   color: #141f27 !important;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 8px 18px;
+  font-weight: 800;
+  font-size: 1.02rem;
+  letter-spacing: 0.2px;
+  padding: 10px 22px;
   border-radius: 50px;
-  box-shadow: 0 4px 14px rgba(var(--secondary-rgb), 0.4);
-  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(254, 197, 3, 0.45);
+  transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-decoration: none;
+  animation: ctaPulseGlow 3s infinite;
+}
+
+@keyframes ctaPulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(254, 197, 3, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 22px rgba(254, 197, 3, 0.68);
+  }
+}
+
+/* Shimmer Light Sweep across Quote button */
+.btn-quote-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  animation: ctaShimmer 3.2s infinite;
+}
+
+@keyframes ctaShimmer {
+  0%, 35% { left: -80%; }
+  65%, 100% { left: 130%; }
 }
 
 .btn-quote-cta:hover {
   background: linear-gradient(135deg, var(--secondary-hover) 0%, #e0a200 100%) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(var(--secondary-rgb), 0.55);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 26px rgba(254, 197, 3, 0.65) !important;
   color: #141f27 !important;
 }
 
 .btn-cta-arrow {
-  background: rgba(20, 31, 39, 0.15);
-  color: #141f27;
-  width: 22px;
-  height: 22px;
+  background: #141f27;
+  color: var(--secondary-color);
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
-  transition: transform 0.2s ease;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
 }
 
 .btn-quote-cta:hover .btn-cta-arrow {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 
 /* Mobile Quick Action Buttons */
@@ -455,5 +790,243 @@
   .page_breadcrumbs .breadcrumb {
     font-size: 0.8125rem;
     gap: 6px;
+  }
+}
+
+/* ==========================================================================
+   Quote Modal & Floating Form Styling
+   ========================================================================== */
+.quote-modal-dialog {
+  max-width: 540px;
+  margin: 1.75rem auto;
+}
+
+.quote-modal-content {
+  border-radius: 20px !important;
+  box-shadow: 0 20px 60px rgba(20, 31, 39, 0.22) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  background: #ffffff;
+}
+
+.quote-modal-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #fffdf2 100%);
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.quote-modal-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b58900;
+  background: rgba(254, 197, 3, 0.16);
+  border: 1px solid rgba(254, 197, 3, 0.4);
+  padding: 3px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.3px;
+}
+
+.quote-modal-close {
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.quote-modal-close:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+  background-color: rgba(20, 31, 39, 0.06);
+}
+
+/* Floating Label Fields */
+.quote-form-floating {
+  position: relative;
+}
+
+.quote-form-floating > .form-control {
+  height: 56px;
+  min-height: 56px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e293b;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.quote-form-floating > .form-control:focus {
+  background-color: #ffffff;
+  border-color: var(--secondary-color, #fec503);
+  box-shadow: 0 0 0 4px rgba(254, 197, 3, 0.2);
+  outline: none;
+}
+
+.quote-form-floating > label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #64748b;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quote-form-floating > label i {
+  color: #d49200;
+  margin-right: 5px;
+  transition: transform 0.2s ease;
+}
+
+.quote-form-floating > .form-control:focus ~ label,
+.quote-form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: #b58900 !important;
+  font-weight: 600 !important;
+}
+
+.quote-form-floating > .form-control:focus ~ label i,
+.quote-form-floating > .form-control:not(:placeholder-shown) ~ label i {
+  transform: scale(1.15);
+}
+
+/* Floating Label on Textarea Fix - Prevents Text Collision */
+.quote-form-floating > textarea.form-control {
+  height: 115px !important;
+  min-height: 115px !important;
+  padding-top: 1.85rem !important;
+  padding-bottom: 0.6rem !important;
+  line-height: 1.45 !important;
+  resize: none;
+}
+
+.quote-form-floating > textarea.form-control ~ label {
+  height: auto !important;
+  top: 0 !important;
+  bottom: auto !important;
+  padding-top: 0.85rem !important;
+}
+
+.quote-form-floating > textarea.form-control:focus ~ label,
+.quote-form-floating > textarea.form-control:not(:placeholder-shown) ~ label {
+  transform: scale(0.82) translateY(-0.45rem) translateX(0.15rem) !important;
+  opacity: 1 !important;
+}
+
+/* Quote Clear Button */
+.btn-quote-clear {
+  background-color: #f1f5f9 !important;
+  border: 1.5px solid #e2e8f0 !important;
+  color: #64748b !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  border-radius: 50px !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-quote-clear:hover {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+  transform: translateY(-1px);
+}
+
+/* Quote Modal Actions - Desktop / Tablet */
+.quote-modal-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.quote-modal-actions .btn-quote-cta {
+  flex: 1 1 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  height: 50px !important;
+}
+
+.quote-modal-actions .btn-quote-clear {
+  flex: 0 0 auto !important;
+  height: 50px !important;
+  padding: 0 24px !important;
+}
+
+/* Modal Footer */
+.quote-modal-footer {
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9 !important;
+  font-size: 0.78rem;
+}
+
+/* Mobile Responsive Optimizations for Quote Modal */
+@media (max-width: 575px) {
+  .quote-modal-dialog {
+    margin: 0.5rem auto !important;
+    max-width: calc(100% - 1rem) !important;
+  }
+
+  .quote-modal-content {
+    border-radius: 16px !important;
+  }
+
+  .quote-modal-header {
+    padding: 1rem 1rem 0.4rem 1rem !important;
+  }
+
+  .quote-modal-header .modal-title {
+    font-size: 1.15rem !important;
+  }
+
+  .quote-modal-header p {
+    font-size: 0.75rem !important;
+  }
+
+  .quote-modal-content .modal-body {
+    padding: 0.75rem 1rem 1rem 1rem !important;
+  }
+
+  .quote-form-floating > .form-control {
+    height: 52px !important;
+    min-height: 52px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .quote-form-floating > label {
+    font-size: 0.8rem !important;
+    padding: 0.85rem 0.75rem !important;
+  }
+
+  .quote-form-floating > textarea.form-control {
+    height: 90px !important;
+    min-height: 90px !important;
+    padding-top: 1.7rem !important;
+  }
+
+  .quote-modal-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .quote-modal-actions .btn-quote-cta {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 0.95rem !important;
+    padding: 0 16px !important;
+  }
+
+  .quote-modal-actions .btn-quote-clear {
+    width: 100% !important;
+    height: 42px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .quote-modal-footer {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.72rem !important;
+    gap: 6px !important;
   }
 }
