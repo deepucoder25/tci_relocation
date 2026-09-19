@@ -1393,3 +1393,675 @@
     padding: 11px;
   }
 }
+
+/* ==========================================================================
+   Main Footer & Floating Action Components (TCI Relocation)
+   ========================================================================== */
+
+/* Main Footer Container */
+.main-site-footer {
+  background: linear-gradient(180deg, #111b24 0%, #0d151c 100%);
+  border-top: 3px solid #fec503;
+  color: #94a3b8;
+}
+
+/* 1. Top Call-To-Action Banner */
+.footer-cta-banner {
+  background: linear-gradient(135deg, rgba(26, 39, 52, 0.95) 0%, rgba(16, 25, 34, 0.98) 100%);
+  border: 1px solid rgba(254, 197, 3, 0.35);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.footer-cta-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.footer-cta-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fec503 0%, #f59e0b 100%);
+  color: #141f27;
+  font-size: 1.75rem;
+  box-shadow: 0 8px 20px rgba(254, 197, 3, 0.35);
+}
+
+.footer-cta-pill {
+  background: rgba(254, 197, 3, 0.15);
+  color: #fec503;
+  border: 1px solid rgba(254, 197, 3, 0.3);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  letter-spacing: 0.3px;
+}
+
+.footer-cta-title {
+  font-size: 1.45rem;
+  letter-spacing: -0.3px;
+}
+
+.footer-cta-btn-call {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.footer-cta-btn-call:hover {
+  background: #ffffff;
+  color: #141f27;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.footer-cta-btn-quote {
+  background: linear-gradient(135deg, #fec503 0%, #f59e0b 100%);
+  color: #141f27;
+  padding: 11px 26px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(254, 197, 3, 0.4);
+}
+
+.footer-cta-btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(254, 197, 3, 0.55);
+  color: #0a1116;
+}
+
+/* 2. Company Brand Mark & Taglines */
+.footer-brand-text-mark {
+  transition: transform 0.25s ease;
+}
+
+.footer-brand-text-mark:hover {
+  transform: translateY(-2px);
+}
+
+.footer-brand-symbol {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1a2734 0%, #0d151c 100%);
+  border: 1.5px solid #fec503;
+  color: #fec503;
+  font-size: 1.55rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-brand-text-mark:hover .footer-brand-symbol {
+  transform: scale(1.05);
+}
+
+.footer-brand-name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.footer-brand-name .brand-part-tci {
+  color: #fec503;
+}
+
+.footer-brand-name .brand-part-reloc {
+  color: #ffffff;
+  font-weight: 800;
+  margin-left: 3px;
+}
+
+.sub-text {
+  font-size: 0.625rem;
+  color: #94a3b8;
+  letter-spacing: 1.2px;
+}
+
+.sub-line {
+  height: 1.5px;
+  background: #fec503;
+  border-radius: 2px;
+  min-width: 10px;
+}
+
+.footer-tagline {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.2px;
+}
+
+.footer-desc {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  max-width: 320px;
+}
+
+.footer-mini-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(5px);
+}
+
+.footer-social-btn:hover {
+  background-color: #fec503;
+  color: #141f27;
+  border-color: #fec503;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(254, 197, 3, 0.4);
+}
+
+/* 3. Navigation Links & Service Badges */
+.footer-capsule-header {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-capsule-header i {
+  color: #fec503;
+  font-size: 1.05rem;
+}
+
+.footer-link {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 2px 0;
+}
+
+.footer-chevron {
+  font-size: 0.72rem;
+  color: #64748b;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.footer-link:hover .footer-chevron {
+  color: #fec503;
+  transform: translateX(3px);
+}
+
+.footer-svc-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.footer-link:hover .footer-svc-icon {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.4);
+}
+
+/* 4. Contact Cards & Live Status Indicator */
+.footer-contact-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.footer-contact-box:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(254, 197, 3, 0.4);
+  transform: translateY(-2px);
+}
+
+.footer-contact-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  font-size: 1rem;
+}
+
+.footer-contact-lbl {
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  color: #64748b;
+}
+
+.footer-contact-val {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+.footer-phone-card {
+  border-left: 3px solid #fec503;
+}
+
+.text-highlight {
+  color: #fec503 !important;
+  font-size: 0.95rem;
+}
+
+.badge-live-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulseLiveDot 1.8s infinite;
+}
+
+@keyframes pulseLiveDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+/* 5. VIP Trust Highlights Strip */
+.footer-trust-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.footer-trust-col {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-trust-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-trust-col:hover .footer-trust-icon-box {
+  transform: scale(1.1);
+  background: rgba(254, 197, 3, 0.18);
+  color: #fec503;
+  border-color: rgba(254, 197, 3, 0.4);
+}
+
+.trust-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.trust-subtitle {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* 6. Bottom Dark Copyright Bar */
+.footer-bottom-bar {
+  background-color: #090e13;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-copy-text {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.footer-security-tag {
+  color: #cbd5e1;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.footer-divider-pipe {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+.footer-sublink {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.footer-sublink:hover {
+  color: #fec503;
+}
+
+/* ==========================================================================
+   Floating Dual Action Buttons (WhatsApp on Left & Call on Right)
+   ========================================================================== */
+.floating-actions-container {
+  z-index: 1040;
+}
+
+.floating-btn-wrapper {
+  bottom: 26px;
+  z-index: 1040;
+}
+
+.floating-btn-left {
+  left: 24px;
+}
+
+.floating-btn-right {
+  right: 24px;
+}
+
+.floating-action-btn {
+  width: 58px;
+  height: 58px;
+  color: #ffffff !important;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-action-btn:hover {
+  transform: translateY(-8px) scale(1.08);
+  animation-play-state: paused;
+}
+
+/* WhatsApp Button */
+.floating-btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  animation: smoothFloat 3.6s ease-in-out infinite, smoothGlowWa 3s ease-in-out infinite;
+}
+
+.floating-btn-whatsapp:hover {
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.65) !important;
+}
+
+/* Call Button (Offset for Natural Wave Motion) */
+.floating-btn-call {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  animation: smoothFloat 3.6s ease-in-out infinite 0.6s, smoothGlowCall 3s ease-in-out infinite 0.4s;
+}
+
+.floating-btn-call:hover {
+  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.65) !important;
+}
+
+/* Shared Weightless Levitation Keyframe */
+@keyframes smoothFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Breathing Glow Aura Keyframes */
+@keyframes smoothGlowWa {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38), 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  50% {
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.58), 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes smoothGlowCall {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.38), 0 0 0 0 rgba(2, 132, 199, 0.45);
+  }
+  50% {
+    box-shadow: 0 12px 30px rgba(2, 132, 199, 0.58), 0 0 0 12px rgba(2, 132, 199, 0);
+  }
+}
+
+/* Floating Action Button Icons */
+.floating-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wa-smooth-anim {
+  animation: smoothWaBreath 3.2s ease-in-out infinite;
+}
+
+@keyframes smoothWaBreath {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.call-smooth-anim {
+  animation: smoothCallSway 3.2s ease-in-out infinite;
+}
+
+@keyframes smoothCallSway {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-10deg) scale(1.06);
+  }
+  75% {
+    transform: rotate(10deg) scale(1.06);
+  }
+}
+
+/* Soft Expanding Waves */
+.floating-soft-pulse {
+  z-index: 1;
+}
+
+.pulse-wa {
+  animation: softWaveWa 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.pulse-call {
+  animation: softWaveCall 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite 0.5s;
+}
+
+@keyframes softWaveWa {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    opacity: 0.9;
+  }
+  65% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.6);
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes softWaveCall {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.6);
+    opacity: 0.9;
+  }
+  65% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 14px rgba(2, 132, 199, 0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.6);
+    box-shadow: 0 0 0 20px rgba(2, 132, 199, 0);
+    opacity: 0;
+  }
+}
+
+/* Interactive Hover Tooltips */
+.floating-tooltip-pill {
+  transform: translateY(-50%) scale(0.92);
+  background: rgba(15, 23, 42, 0.94);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.tooltip-left {
+  left: 70px;
+}
+
+.tooltip-right {
+  right: 70px;
+}
+
+.floating-action-btn:hover .floating-tooltip-pill {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+/* ==========================================================================
+   Consolidated Responsive Breakpoints (Footer & Floating Action Buttons)
+   ========================================================================== */
+
+/* Tablets & Medium Screens (<= 991px) */
+@media (max-width: 991px) {
+  .footer-trust-col {
+    border-right: none;
+  }
+
+  .footer-cta-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Devices (<= 767px) */
+@media (max-width: 767px) {
+  .footer-bottom-bar {
+    padding-bottom: 3.5rem;
+  }
+
+  .floating-btn-wrapper {
+    bottom: 20px;
+  }
+
+  .floating-btn-left {
+    left: 16px;
+  }
+
+  .floating-btn-right {
+    right: 16px;
+  }
+
+  .floating-action-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra Small Phones (<= 575px) */
+@media (max-width: 575px) {
+  .footer-cta-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .footer-cta-pill {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+  }
+
+  .footer-cta-title {
+    font-size: 1.15rem;
+  }
+
+  .footer-cta-desc {
+    font-size: 0.78rem;
+  }
+
+  .footer-cta-btn-call,
+  .footer-cta-btn-quote {
+    font-size: 0.8rem;
+    padding: 8px 8px;
+  }
+
+  .footer-capsule-header {
+    font-size: 0.82rem;
+    padding: 5px 14px;
+  }
+
+  .trust-title {
+    font-size: 0.9rem;
+  }
+
+  .trust-subtitle {
+    font-size: 0.72rem;
+  }
+}
