@@ -46,7 +46,7 @@
         <span class="heading-divider-line line-right"></span>
       </div>
 
-      <p class="section-desc mb-0 mx-auto" style="max-width: 680px;">
+      <p class="section-desc mb-0 mx-auto">
         We maintain the highest standards to deliver a reliable and hassle-free moving experience for every customer.
       </p>
     </div>

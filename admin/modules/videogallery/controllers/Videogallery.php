@@ -27,6 +27,8 @@ class Videogallery extends MX_Controller
                 $url = 'https://www.youtube.com/embed/' . $matches[1];
             } elseif (preg_match('/youtu\.be\/([^?]+)/', $url, $matches)) {
                 $url = 'https://www.youtube.com/embed/' . $matches[1];
+            } elseif (preg_match('/youtube\.com\/shorts\/([^?\/]+)/', $url, $matches)) {
+                $url = 'https://www.youtube.com/embed/' . $matches[1];
             }
             $data['video_url'] = $url;
             

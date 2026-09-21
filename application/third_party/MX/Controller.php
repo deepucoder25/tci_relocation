@@ -80,7 +80,7 @@ class MX_Controller
 
         $this->comp['happyClients'] = "10,000+";
         $this->comp['yearsExperience'] = "10+";
-        $this->comp['secureShifting'] = "100%";
+        $this->comp['secureShifting'] = "98.7%";
         $this->comp['statesCovered'] = "20+";
         $this->comp['citiesCovered'] = "100+";
 

@@ -117,7 +117,7 @@
             <span class="heading-divider-line line-right"></span>
           </div>
 
-          <p class="text-secondary mt-2 mb-0" style="font-size: 0.98rem; line-height: 1.7;">
+          <p class="section-desc text-start mt-2 mb-0">
             At <strong><?= htmlspecialchars($company3 ?? 'TCI Relocation Packers Movers') ?></strong>, we believe moving is more than just transportation — it's about trust, care and new beginnings. With professional packing, careful handling and on-time delivery, we make your relocation smooth, stress-free and memorable.
           </p>
         </div>

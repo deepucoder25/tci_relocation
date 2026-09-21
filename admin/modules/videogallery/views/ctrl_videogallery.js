@@ -59,7 +59,7 @@ app.controller('ctrl_videogallery',function($scope,$http){
 		if(confirm("Are you Sure to DELETE ??"))
 		{
 			$http.get("videogallery/delete_data?id="+x.auto_id).success(function(data){
-				if(data=="1")
+				if(data=="1" || parseInt(data) >= 1)
 				{
 					$("#result").html("<div class='alert alert-success'>Video Deleted Successfully</div>");
 				}

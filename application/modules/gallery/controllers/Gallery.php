@@ -3,17 +3,32 @@ class Gallery extends MX_Controller {
     
     public function __construct() {
         parent::__construct();
-        $this->load->database();
+        @$this->load->database();
     }
 
     function photo_gallery()
     {
-        $data['title'] = "Photo Gallery | " . $this->comp['company3'];
-        $data['description'] = "Explore visual highlights of our cargo handling, warehouse storage, specialized container fleets, and global logistics operations at " . $this->comp['company3'] . ".";
+        $data['title'] = "Photo Gallery - Relocation & Transport | " . $this->comp['company3'];
+        $data['description'] = "Browse photos of our household packing process, containerized trucks, warehouse storage, and safe vehicle carrier loading at " . $this->comp['company3'] . ".";
         
-        $this->db->where('status', 1);
-        $this->db->order_by('auto_id', 'DESC');
-        $data['photos'] = $this->db->get('gallery')->result();
+        $photos = [];
+        try {
+            $CI =& get_instance();
+            if (!isset($CI->db) || !is_object($CI->db)) {
+                @$this->load->database();
+            }
+            if (!empty($CI->db) && is_object($CI->db) && !empty($CI->db->conn_id) && $CI->db->table_exists('gallery')) {
+                $CI->db->where('status', 1);
+                $CI->db->order_by('auto_id', 'DESC');
+                $query = $CI->db->get('gallery');
+                if ($query) {
+                    $photos = $query->result();
+                }
+            }
+        } catch (Throwable $e) {
+            $photos = [];
+        }
+        $data['photos'] = $photos;
         
         $data['module'] = "gallery";
         $data['view_file'] = "photo-gallery";
@@ -22,12 +37,27 @@ class Gallery extends MX_Controller {
 
     function video_gallery()
     {
-        $data['title'] = "Video Gallery | " . $this->comp['company3'];
-        $data['description'] = "Watch our step-by-step cargo handling processes, transport safety standards, and global freight forwarding operations in action at " . $this->comp['company3'] . ".";
+        $data['title'] = "Video Gallery - Live Moving Operations | " . $this->comp['company3'];
+        $data['description'] = "Watch videos of our packing techniques, car loading, heavy item shifting, and professional relocation operations at " . $this->comp['company3'] . ".";
         
-        $this->db->where('status', 1);
-        $this->db->order_by('auto_id', 'DESC');
-        $data['videos'] = $this->db->get('video_gallery')->result();
+        $videos = [];
+        try {
+            $CI =& get_instance();
+            if (!isset($CI->db) || !is_object($CI->db)) {
+                @$this->load->database();
+            }
+            if (!empty($CI->db) && is_object($CI->db) && !empty($CI->db->conn_id) && $CI->db->table_exists('video_gallery')) {
+                $CI->db->where('status', 1);
+                $CI->db->order_by('auto_id', 'DESC');
+                $query = $CI->db->get('video_gallery');
+                if ($query) {
+                    $videos = $query->result();
+                }
+            }
+        } catch (Throwable $e) {
+            $videos = [];
+        }
+        $data['videos'] = $videos;
         
         $data['module'] = "gallery";
         $data['view_file'] = "video-gallery";
