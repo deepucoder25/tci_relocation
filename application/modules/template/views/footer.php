@@ -158,6 +158,12 @@
               <span>Warehousing &amp; Storage</span>
             </a>
           </li>
+          <li>
+            <a href="<?= site_url('iba-approved-movers') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none">
+              <span class="footer-svc-icon d-inline-flex align-items-center justify-content-center flex-shrink-0"><i class="bi bi-patch-check-fill"></i></span>
+              <span>IBA Approved Movers</span>
+            </a>
+          </li>
         </ul>
       </div>
 

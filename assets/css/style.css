@@ -1,6 +1,12 @@
+@import "home.css";
+
 /* ==========================================================================
    Global Variables & Design Tokens (Sampled directly from Logo.png)
    ========================================================================== */
+html, body {
+  font-family: 'Outfit', sans-serif;
+}
+
 :root {
   /* Exact Logo Colors: Midnight Navy & Golden Warm Yellow */
   --primary-color: #141f27;
@@ -10,6 +16,9 @@
   --secondary-color: #fec503;
   --secondary-rgb: 254, 197, 3;
   --secondary-hover: #e5b000;
+
+  /* Heading & Action Accent bound to secondary yellow */
+  --heading-accent: var(--secondary-color, #fec503);
 }
 
 /* Top Bar Styles */

@@ -60,4 +60,22 @@ class Services extends MX_Controller
         $data['view_file'] = "loading_unloading";
         echo Modules::run('template/layout2', $data);
     }
+
+    function storage()
+    {
+        $data['title'] = "Warehousing and Storage Services | " . $this->comp['company3'];
+        $data['description'] = "Safe and secure warehousing and storage services by " . $this->comp['company3'] . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "storage";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function ibaApproved()
+    {
+        $data['title'] = "IBA Approved Packers and Movers | " . $this->comp['company3'];
+        $data['description'] = "Government bank recognized and IBA approved packers and movers services by " . $this->comp['company3'] . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "iba_approved";
+        echo Modules::run('template/layout2', $data);
+    }
 }

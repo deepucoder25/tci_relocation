@@ -17,7 +17,8 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
   'bike-transportation', 'warehouse-and-storage', 'domestic-relocation',
   'international-shifting', 'corporate-shifting', 'intercity-shifting',
   'local-shifting', 'logistic-services', 'pet-relocation', 'home-relocation',
-  'storage-services', 'car-transportation-service', 'packing-and-moving', 'loading-unloading'
+  'storage-services', 'car-transportation-service', 'packing-and-moving', 'loading-unloading',
+  'iba-approved-movers'
 ])) {
   $active_tab = 'services';
 } elseif ($class === 'packers_movers' || $segment1 === 'our-branches') {
@@ -91,7 +92,7 @@ $nav_schema = [
       
       <!-- Brand Logo -->
       <a class="navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none flex-shrink-0" href="<?= site_url() ?>">
-        <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($company3) ?>" class="nav-logo img-fluid">
+        <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($company3) ?>" class="nav-logo img-fluid" loading="lazy">
       </a>
 
       <!-- Mobile Actions (Get Quote + Hamburger Menu) (Visible only on < lg screens) -->
@@ -145,6 +146,7 @@ $nav_schema = [
               <li><a class="dropdown-item <?= in_array($segment1, ['packing-and-moving']) ? 'active' : '' ?>" href="<?= site_url('packing-and-moving') ?>"><i class="bi bi-box-seam"></i> Packing &amp; Moving</a></li>
               <li><a class="dropdown-item <?= in_array($segment1, ['loading-unloading']) ? 'active' : '' ?>" href="<?= site_url('loading-unloading') ?>"><i class="bi bi-arrow-down-up"></i> Loading &amp; Unloading</a></li>
               <li><a class="dropdown-item <?= in_array($segment1, ['storage-services', 'warehouse-and-storage']) ? 'active' : '' ?>" href="<?= site_url('storage-services') ?>"><i class="bi bi-shop"></i> Warehousing &amp; Storage</a></li>
+              <li><a class="dropdown-item <?= ($segment1 === 'iba-approved-movers') ? 'active' : '' ?>" href="<?= site_url('iba-approved-movers') ?>"><i class="bi bi-patch-check"></i> IBA Approved Movers</a></li>
             </ul>
           </li>
 
@@ -199,7 +201,7 @@ $nav_schema = [
   <!-- Offcanvas Header -->
   <div class="offcanvas-header border-bottom py-3">
     <a class="d-flex align-items-center text-decoration-none" href="<?= site_url() ?>">
-      <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($company3) ?>" class="offcanvas-header-logo">
+      <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= htmlspecialchars($company3) ?>" class="offcanvas-header-logo" loading="lazy">
     </a>
     <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close" id="closeMenu"></button>
   </div>
@@ -243,6 +245,7 @@ $nav_schema = [
           <a href="<?= site_url('packing-and-moving') ?>" class="offcanvas-sublink"><i class="bi bi-box-seam"></i> Packing &amp; Moving</a>
           <a href="<?= site_url('loading-unloading') ?>" class="offcanvas-sublink"><i class="bi bi-arrow-down-up"></i> Loading &amp; Unloading</a>
           <a href="<?= site_url('storage-services') ?>" class="offcanvas-sublink"><i class="bi bi-shop"></i> Warehousing &amp; Storage</a>
+          <a href="<?= site_url('iba-approved-movers') ?>" class="offcanvas-sublink"><i class="bi bi-patch-check"></i> IBA Approved Movers</a>
         </div>
       </div>
 

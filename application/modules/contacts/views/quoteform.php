@@ -46,6 +46,7 @@
                         <option value="Packing &amp; Moving">Packing &amp; Moving</option>
                         <option value="Loading &amp; Unloading">Loading &amp; Unloading</option>
                         <option value="Warehousing &amp; Storage">Warehousing &amp; Storage</option>
+                        <option value="IBA Approved Movers">IBA Approved Movers</option>
                       </select>
                       <label for="heroService"><i class="bi bi-truck"></i> Select Service</label>
                     </div>

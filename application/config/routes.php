@@ -35,9 +35,10 @@ $route["bike-transportation"] = "services/bike";
 $route["car-transportation"] = "services/car";
 $route["packing-and-moving"] = "services/packingMoving";
 $route["loading-unloading"] = "services/loadingUnloading";
+$route["storage-services"] = "services/storage";
+$route["iba-approved-movers"] = "services/ibaApproved";
 
 // Legacy/Compatibility Routes
-$route["storage-services"] = "services/storage";
 $route["car-transportation-service"] = "services/car";
 $route["infrastructure"] = "about/infrastructure";
 $route["why-choose-us"] = "about/choose";
