@@ -4271,3 +4271,282 @@ body {
 }
 
 
+/* --------------------------------------------------------------------------
+   1. Service Header Tags & Hero Accents
+   -------------------------------------------------------------------------- */
+.service-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(var(--secondary-rgb, 254, 197, 3), 0.14);
+  color: var(--primary-color, #141f27);
+  border: 1px solid rgba(var(--secondary-rgb, 254, 197, 3), 0.4);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+.service-pill-tag i {
+  color: var(--secondary-color, #fec503);
+}
+
+.service-overview-card {
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.service-overview-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--secondary-rgb, 254, 197, 3), 0.6) !important;
+  box-shadow: 0 10px 24px rgba(var(--primary-rgb, 20, 31, 39), 0.08);
+  background: #ffffff;
+}
+
+.service-overview-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  background: rgba(var(--secondary-rgb, 254, 197, 3), 0.15);
+  color: var(--primary-color, #141f27);
+  transition: all 0.25s ease;
+}
+
+.service-overview-card:hover .service-overview-icon {
+  background: var(--secondary-color, #fec503);
+  color: var(--primary-color, #141f27);
+  transform: scale(1.05);
+}
+
+.service-hero-cta-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+/* --------------------------------------------------------------------------
+   2. Interactive Bike Type Category Cards
+   -------------------------------------------------------------------------- */
+.service-type-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 1.75rem 1.4rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-type-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary-color, #fec503) !important;
+  box-shadow: 0 16px 36px rgba(var(--primary-rgb, 20, 31, 39), 0.08) !important;
+}
+
+.service-type-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(var(--secondary-rgb, 254, 197, 3), 0.15);
+  color: var(--secondary-color, #fec503);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-type-card:hover .service-type-icon {
+  transform: scale(1.06);
+  background: var(--secondary-color, #fec503);
+  color: var(--primary-color, #141f27);
+}
+
+/* --------------------------------------------------------------------------
+   3. Step-by-Step Two-Wheeler Safety Process Stepper
+   -------------------------------------------------------------------------- */
+.service-step-card {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #eef2f6;
+  background: #ffffff;
+  padding: 1.75rem 1.4rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.service-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary-color, #fec503);
+  box-shadow: 0 14px 30px rgba(var(--primary-rgb, 20, 31, 39), 0.07);
+}
+
+.service-step-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(var(--secondary-rgb, 254, 197, 3), 0.15);
+  color: var(--primary-color, #141f27);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.service-step-card:hover .service-step-icon {
+  background: var(--secondary-color, #fec503);
+  color: var(--primary-color, #141f27);
+  transform: scale(1.06);
+}
+
+.service-step-num {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: rgba(var(--primary-rgb, 20, 31, 39), 0.12);
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.service-step-card:hover .service-step-num {
+  color: var(--secondary-color, #fec503);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Checklist Card Styling
+   -------------------------------------------------------------------------- */
+.service-checklist-card {
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 1.75rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+/* --------------------------------------------------------------------------
+   6. Two-Wheeler Service FAQ Accordion Styling (Single Column)
+   -------------------------------------------------------------------------- */
+.service-faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px !important;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.service-faq-item:hover {
+  border-color: rgba(var(--secondary-rgb, 254, 197, 3), 0.6);
+  box-shadow: 0 6px 20px rgba(var(--primary-rgb, 20, 31, 39), 0.05);
+}
+
+.service-faq-item:has(.accordion-button:not(.collapsed)) {
+  border-color: var(--secondary-color, #fec503);
+  box-shadow: 0 8px 24px rgba(var(--secondary-rgb, 254, 197, 3), 0.14);
+}
+
+.service-faq-btn {
+  background: #ffffff;
+  color: var(--primary-color, #141f27);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1.15rem 1.35rem;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-faq-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(var(--secondary-rgb, 254, 197, 3), 0.14);
+  color: var(--primary-color, #141f27);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.service-faq-btn:not(.collapsed) .service-faq-icon {
+  background: var(--secondary-color, #fec503);
+  color: var(--primary-color, #141f27);
+}
+
+.service-faq-title {
+  flex-grow: 1;
+  text-align: left;
+  line-height: 1.45;
+}
+
+.service-faq-btn:not(.collapsed) {
+  background-color: rgba(var(--secondary-rgb, 254, 197, 3), 0.06);
+  color: var(--primary-color, #141f27);
+  border-bottom: 1px solid rgba(var(--secondary-rgb, 254, 197, 3), 0.2);
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.service-faq-body {
+  padding: 1.35rem 1.5rem;
+  color: #475569;
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+.service-faq-tip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border-left: 3px solid var(--secondary-color, #fec503);
+  padding: 9px 14px;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.84rem;
+  margin-top: 12px;
+}
+
+.service-faq-cta-banner {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px dashed rgba(var(--secondary-rgb, 254, 197, 3), 0.7);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Responsive Tweaks
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .service-overview-card {
+    padding: 1.25rem !important;
+  }
+
+  .service-faq-btn {
+    padding: 1rem !important;
+    font-size: 0.94rem;
+  }
+
+  .service-hero-cta-box {
+    padding: 1rem 1.15rem !important;
+  }
+
+  .service-hero-cta-box .small {
+    font-size: 0.82rem !important;
+    line-height: 1.3;
+  }
+}
