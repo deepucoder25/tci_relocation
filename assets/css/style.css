@@ -7149,10 +7149,8 @@ body {
 /* --------------------------------------------------------------------------
    1. Desktop Screens (min-width: 992px)
    -------------------------------------------------------------------------- */
-
-/* Uniform Gap Layout across every navbar item (Logo, Links, Call, Quote) */
 @media (min-width: 992px) {
-  .main-navbar .main-nav-container {
+.main-navbar .main-nav-container {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -7185,12 +7183,8 @@ body {
   .main-navbar .navbar-brand {
     flex: 0 0 auto !important;
   }
-}
 
-/* Dropdown Menu Styling - Floating Modern Card Positioned Below Nav Link */
-@media (min-width: 992px) {
-
-  .main-navbar .dropdown-menu {
+.main-navbar .dropdown-menu {
     display: block;
     position: absolute;
     top: 100%;
@@ -7229,21 +7223,13 @@ body {
     pointer-events: auto;
     transform: translateY(0);
   }
-}
 
-/* --------------------------------------------------------------------------
-   8. Legal Pages: Sticky Table of Contents Offset (privacy.php, terms.php)
-   -------------------------------------------------------------------------- */
-@media (min-width: 992px) {
-  .sticky-lg-top {
+.sticky-lg-top {
     top: 90px;
     z-index: 10;
   }
-}
 
-/* Contact Page Responsive Styles */
-@media (min-width: 992px) {
-  .cnt-main-row {
+.cnt-main-row {
     align-items: stretch !important;
   }
   .cnt-col-left,
@@ -7281,9 +7267,8 @@ body {
 /* --------------------------------------------------------------------------
    2. Desktop-to-Laptop Range (min-width: 992px) and (max-width: 1199px)
    -------------------------------------------------------------------------- */
-
 @media (min-width: 992px) and (max-width: 1199px) {
-  .main-navbar .nav-logo {
+.main-navbar .nav-logo {
     height: 65px;
     max-height: 65px;
   }
@@ -7311,21 +7296,15 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   3. Medium Screens & Laptops (max-width: 991.98px / max-width: 991px)
+   3. Medium Screens & Laptops (max-width: 991px)
    -------------------------------------------------------------------------- */
-
 @media (max-width: 991px) {
-  .main-navbar .nav-logo {
+.main-navbar .nav-logo {
     height: 65px;
     max-height: 80px;
   }
-}
 
-/* ==========================================================================
-   Responsive Adaptations for Hero Slider & Quote Form
-   ========================================================================== */
-@media (max-width: 991px) {
-  .hero-slider-section {
+.hero-slider-section {
     min-height: auto;
   }
 
@@ -7381,47 +7360,32 @@ body {
     max-width: 540px;
     margin: 0 auto;
   }
-}
 
-/* Tablets & Medium Screens (<= 991px) */
-@media (max-width: 991px) {
-  .footer-trust-col {
+.footer-trust-col {
     border-right: none;
   }
 
   .footer-cta-title {
     font-size: 1.25rem;
   }
-}
 
-/* --------------------------------------------------------------------------
-   8. Consolidated Responsive Breakpoints
-   -------------------------------------------------------------------------- */
-@media (max-width: 991px) {
-  .heading-dots-decor {
+.heading-dots-decor {
     display: none;
   }
 
   .section-title {
     font-size: 1.85rem;
   }
-}
 
-/* --------------------------------------------------------------------------
-   10. Consolidated Responsive Breakpoints
-   -------------------------------------------------------------------------- */
-@media (max-width: 991px) {
-  .about-page-title {
+.about-page-title {
     font-size: 1.85rem;
   }
 
   .about-visual-card img {
     height: 380px;
   }
-}
 
-@media (max-width: 991.98px) {
-  .city-mosaic-hero {
+.city-mosaic-hero {
     height: 380px;
   }
   .city-mosaic-truck,
@@ -7431,27 +7395,19 @@ body {
   .city-mosaic-grid {
     grid-template-rows: 183px 183px;
   }
-}
 
-@media (max-width: 991.98px) {
-  .city-process-section {
+.city-process-section {
     padding: 3.5rem 0 !important;
   }
   .city-glass-dispatch-strip {
     padding: 1.25rem 1.25rem !important;
   }
-}
 
-/* Tracking Page Responsive Styles */
-@media (max-width: 991.98px) {
-  .track-info-grid {
+.track-info-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-/* Blog Responsive Styles */
-@media (max-width: 991.98px) {
-  .blog-main-title {
+.blog-main-title {
     font-size: 1.95rem;
   }
   .blog-details-title {
@@ -7464,12 +7420,10 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   4. Tablet Screens (max-width: 768px / max-width: 767.98px / max-width: 767px)
+   4. Tablet Breadcrumbs (max-width: 768px)
    -------------------------------------------------------------------------- */
-
-/* Responsive adjustments keeping the exact compact height */
 @media (max-width: 768px) {
-  .dynamic-bc-section,
+.dynamic-bc-section,
   .service-breadcrumbs,
   .site-breadcrumb,
   .page_breadcrumbs {
@@ -7508,9 +7462,11 @@ body {
   }
 }
 
-/* Mobile Devices (<= 767px) */
+/* --------------------------------------------------------------------------
+   5. Tablet Screens (max-width: 767px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 767px) {
-  .footer-bottom-bar {
+.footer-bottom-bar {
     padding-bottom: 3.5rem;
   }
 
@@ -7534,10 +7490,8 @@ body {
   .floating-icon {
     font-size: 1.5rem;
   }
-}
 
-@media (max-width: 767px) {
-  .home-section-header {
+.home-section-header {
     margin-bottom: 2rem;
   }
 
@@ -7676,10 +7630,8 @@ body {
   .testimonial-slider-fade-right {
     width: 24px;
   }
-}
 
-@media (max-width: 767px) {
-  .about-overview-section,
+.about-overview-section,
   .about-bento-section,
   .about-team-section {
     padding: 3.5rem 0 3rem;
@@ -7719,13 +7671,8 @@ body {
   .about-bento-card {
     padding: 1.6rem 1.35rem;
   }
-}
 
-/* --------------------------------------------------------------------------
-   7. Responsive Tweaks
-   -------------------------------------------------------------------------- */
-@media (max-width: 767px) {
-  .service-overview-card {
+.service-overview-card {
     padding: 1.25rem !important;
   }
 
@@ -7742,10 +7689,8 @@ body {
     font-size: 0.82rem !important;
     line-height: 1.3;
   }
-}
 
-@media (max-width: 767.98px) {
-  .cnt-form-box,
+.cnt-form-box,
   .cnt-info-box {
     padding: 20px 16px;
     border-radius: 16px;
@@ -7755,10 +7700,8 @@ body {
     border-radius: 16px;
     margin-top: 36px;
   }
-}
 
-@media (max-width: 767.98px) {
-  .track-search-card {
+.track-search-card {
     padding: 30px 20px 26px 20px;
     border-radius: 20px;
   }
@@ -7813,11 +7756,10 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   5. Mobile Devices (max-width: 575.98px / max-width: 575px)
+   6. Mobile Devices (max-width: 575px)
    -------------------------------------------------------------------------- */
-
 @media (max-width: 575px) {
-  .top-bar {
+.top-bar {
     font-size: 0.75rem;
     padding-top: 4px !important;
     padding-bottom: 4px !important;
@@ -7829,17 +7771,10 @@ body {
   .top-bar-link .top-bar-icon {
     font-size: 0.8rem;
   }
-}
-
-@media (max-width: 575px) {
   .main-navbar .nav-logo {
     height: 70px;
     max-height: 80px;
   }
-}
-
-/* Mobile Responsive Optimizations for Quote Modal */
-@media (max-width: 575px) {
   .quote-modal-dialog {
     margin: 0.5rem auto !important;
     max-width: calc(100% - 1rem) !important;
@@ -7883,16 +7818,11 @@ body {
     padding-top: 1.7rem !important;
   }
 
-
-
   .quote-modal-footer {
     padding: 0.6rem 1rem !important;
     font-size: 0.72rem !important;
     gap: 6px !important;
   }
-}
-
-@media (max-width: 575px) {
   .hero-slider-section {
     padding-bottom: 1.5rem;
   }
@@ -7979,11 +7909,8 @@ body {
     font-size: 0.95rem;
     padding: 11px;
   }
-}
 
-/* Extra Small Phones (<= 575px) */
-@media (max-width: 575px) {
-  .footer-cta-icon-box {
+.footer-cta-icon-box {
     width: 42px;
     height: 42px;
     font-size: 1.25rem;
@@ -8021,10 +7948,8 @@ body {
   .trust-subtitle {
     font-size: 0.72rem;
   }
-}
 
-@media (max-width: 575px) {
-  .section-title {
+.section-title {
     font-size: 1.4rem;
   }
 
@@ -8035,9 +7960,7 @@ body {
   .standards-badge-img-wrap {
     width: 95px;
   }
-}
 
-@media (max-width: 575px) {
   .about-page-title {
     font-size: 1.35rem;
   }
@@ -8049,12 +7972,7 @@ body {
   .about-overview-lead {
     font-size: 1rem;
   }
-}
 
-/* --------------------------------------------------------------------------
-   5. Mobile Responsive Refinements (states.php & city_list.php)
-   -------------------------------------------------------------------------- */
-@media (max-width: 575px) {
   .pm-branch-card {
     border-radius: 16px;
   }
@@ -8118,9 +8036,7 @@ body {
     background: transparent !important;
     color: var(--secondary-color, #fec503) !important;
   }
-}
 
-@media (max-width: 575px) {
   .hero-breadcrumb-pill {
     flex-wrap: nowrap !important;
     max-width: 100%;
@@ -8162,10 +8078,8 @@ body {
     padding: 2px 7px;
     flex-shrink: 0;
   }
-}
 
-@media (max-width: 575.98px) {
-  .city-mosaic-grid {
+.city-mosaic-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 240px 145px;
     gap: 10px;
@@ -8185,10 +8099,8 @@ body {
     grid-row: 2;
     height: 145px;
   }
-}
 
-@media (max-width: 575.98px) {
-  .city-map-inner-embed,
+.city-map-inner-embed,
   .city-map-inner-embed iframe,
   .pm-city-map-iframe {
     height: 320px !important;
@@ -8204,11 +8116,8 @@ body {
   .city-map-gps-badge {
     display: none;
   }
-}
 
-/* --- 7.6 Mobile Refinements for City Sections --- */
-@media (max-width: 575px) {
-  .city-about-card {
+.city-about-card {
     padding: 1.25rem 1rem;
     border-radius: 16px;
   }
@@ -8246,10 +8155,8 @@ body {
   .city-stat-number {
     font-size: 1.4rem;
   }
-}
 
-@media (max-width: 575.98px) {
-  .cnt-submit-wrap {
+.cnt-submit-wrap {
     flex-direction: column;
     align-items: stretch;
   }
@@ -8273,10 +8180,8 @@ body {
   .cnt-floating-wrap.has-icon .cnt-field-icon {
     left: 14px;
   }
-}
 
-@media (max-width: 575.98px) {
-  .track-search-card {
+.track-search-card {
     padding: 24px 16px 22px 16px;
   }
   .track-title {
@@ -8368,10 +8273,8 @@ body {
     font-size: 0.72rem;
     padding: 3px 8px;
   }
-}
 
-@media (max-width: 575.98px) {
-  .blog-main-title {
+.blog-main-title {
     font-size: 1.6rem;
   }
   .blog-card-img-wrap {
@@ -8402,13 +8305,11 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   6. Extra Small Phones (max-width: 375px)
+   7. Extra Small Phones (max-width: 375px)
    -------------------------------------------------------------------------- */
-
 @media (max-width: 375px) {
-  .btn-mobile-quote {
+.btn-mobile-quote {
     font-size: 0.8rem !important;
     padding: 7px 12px !important;
   }
 }
-
