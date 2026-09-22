@@ -118,7 +118,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="city-avatar-circle">VS</div>
                                         <div>
-                                            <h4 class="fw-bold text-dark mb-0 fs-6">Vikram R. Sharma</h4>
+                                            <h3 class="fw-bold text-dark mb-0 fs-6">Vikram R. Sharma</h3>
                                             <span class="city-verified-tag"><i class="bi bi-patch-check-fill"></i> Verified Move</span>
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="city-avatar-circle">PM</div>
                                         <div>
-                                            <h4 class="fw-bold text-dark mb-0 fs-6">Pooja &amp; Ankit Mehta</h4>
+                                            <h3 class="fw-bold text-dark mb-0 fs-6">Pooja &amp; Ankit Mehta</h3>
                                             <span class="city-verified-tag"><i class="bi bi-patch-check-fill"></i> Verified Move</span>
                                         </div>
                                     </div>
@@ -166,7 +166,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="city-avatar-circle">RD</div>
                                         <div>
-                                            <h4 class="fw-bold text-dark mb-0 fs-6">Col. Rajesh Deshmukh</h4>
+                                            <h3 class="fw-bold text-dark mb-0 fs-6">Col. Rajesh Deshmukh</h3>
                                             <span class="city-verified-tag"><i class="bi bi-patch-check-fill"></i> Verified Move</span>
                                         </div>
                                     </div>
@@ -190,7 +190,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="city-avatar-circle">SK</div>
                                         <div>
-                                            <h4 class="fw-bold text-dark mb-0 fs-6">Siddharth K. Kulkarni</h4>
+                                            <h3 class="fw-bold text-dark mb-0 fs-6">Siddharth K. Kulkarni</h3>
                                             <span class="city-verified-tag"><i class="bi bi-patch-check-fill"></i> Verified Move</span>
                                         </div>
                                     </div>
@@ -214,7 +214,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="city-avatar-circle">MS</div>
                                         <div>
-                                            <h4 class="fw-bold text-dark mb-0 fs-6">Dr. M. Sundaram</h4>
+                                            <h3 class="fw-bold text-dark mb-0 fs-6">Dr. M. Sundaram</h3>
                                             <span class="city-verified-tag"><i class="bi bi-patch-check-fill"></i> Verified Move</span>
                                         </div>
                                     </div>

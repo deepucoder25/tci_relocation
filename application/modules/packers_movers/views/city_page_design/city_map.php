@@ -15,6 +15,7 @@ if (!empty($lat) && !empty($lon)) { ?>
         class="pm-city-map-iframe"
         loading="lazy"
         allowfullscreen
+        title="<?php echo htmlspecialchars($city); ?> Location Map - TCI Relocation"
         src="https://www.google.com/maps?q=<?php echo $lat; ?>,<?php echo $lon; ?>&hl=en&z=12&output=embed">
     </iframe>
 <?php } ?>

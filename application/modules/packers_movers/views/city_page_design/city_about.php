@@ -82,7 +82,7 @@ include 'city_content.php';
                         <div class="city-bento-icon flex-shrink-0">
                             <i class="bi bi-people-fill"></i>
                         </div>
-                        <h4 class="fw-bold text-dark mb-0 fs-6 lh-sm">Trained In-House Staff</h4>
+                        <h3 class="fw-bold text-dark mb-0 fs-6 lh-sm">Trained In-House Staff</h3>
                     </div>
                     <p class="text-muted small mb-0 lh-base">
                         Permanently employed, background-verified packers skilled in high-rise rigging and delicate household handling in <?= $city ?>.
@@ -96,7 +96,7 @@ include 'city_content.php';
                         <div class="city-bento-icon flex-shrink-0">
                             <i class="bi bi-layers-fill"></i>
                         </div>
-                        <h4 class="fw-bold text-dark mb-0 fs-6 lh-sm">4-Layer Armored Packing</h4>
+                        <h3 class="fw-bold text-dark mb-0 fs-6 lh-sm">4-Layer Armored Packing</h3>
                     </div>
                     <p class="text-muted small mb-0 lh-base">
                         Thick air-bubble cushion, corrugated wraps, edge corner protectors, and waterproof cling film protecting every item from scuffs.
@@ -110,7 +110,7 @@ include 'city_content.php';
                         <div class="city-bento-icon flex-shrink-0">
                             <i class="bi bi-truck-front-fill"></i>
                         </div>
-                        <h4 class="fw-bold text-dark mb-0 fs-6 lh-sm">All-Weather Fleet</h4>
+                        <h3 class="fw-bold text-dark mb-0 fs-6 lh-sm">All-Weather Fleet</h3>
                     </div>
                     <p class="text-muted small mb-0 lh-base">
                         Dedicated weatherproof containerized trucks running on national expressways with GPS tracking and zero intermediate transfer.
@@ -124,7 +124,7 @@ include 'city_content.php';
                         <div class="city-bento-icon flex-shrink-0">
                             <i class="bi bi-shield-lock-fill"></i>
                         </div>
-                        <h4 class="fw-bold text-dark mb-0 fs-6 lh-sm">Insurance &amp; Claims</h4>
+                        <h3 class="fw-bold text-dark mb-0 fs-6 lh-sm">Insurance &amp; Claims</h3>
                     </div>
                     <p class="text-muted small mb-0 lh-base">
                         Fast and clear transit risk coverage guaranteeing swift claim resolution in the rare event of accidental highway damage.

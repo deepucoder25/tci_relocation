@@ -131,7 +131,7 @@
               <i class="bi bi-people-fill"></i>
             </div>
             <div>
-              <h4 class="about-feature-title">Experienced Professionals</h4>
+              <h3 class="about-feature-title">Experienced Professionals</h3>
               <p class="about-feature-desc">Skilled team ensuring smooth &amp; efficient moves.</p>
             </div>
           </div>
@@ -142,7 +142,7 @@
               <i class="bi bi-shield-check"></i>
             </div>
             <div>
-              <h4 class="about-feature-title">Safe &amp; Secure</h4>
+              <h3 class="about-feature-title">Safe &amp; Secure</h3>
               <p class="about-feature-desc">Your belongings are packed and delivered with maximum care.</p>
             </div>
           </div>
@@ -153,7 +153,7 @@
               <i class="bi bi-clock-fill"></i>
             </div>
             <div>
-              <h4 class="about-feature-title">On-Time Delivery</h4>
+              <h3 class="about-feature-title">On-Time Delivery</h3>
               <p class="about-feature-desc">We value your time and ensure timely delivery every time.</p>
             </div>
           </div>
@@ -164,7 +164,7 @@
               <i class="bi bi-headset"></i>
             </div>
             <div>
-              <h4 class="about-feature-title">24/7 Customer Support</h4>
+              <h3 class="about-feature-title">24/7 Customer Support</h3>
               <p class="about-feature-desc">We're always here to help you at every step of your journey.</p>
             </div>
           </div>
