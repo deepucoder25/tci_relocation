@@ -101,7 +101,7 @@
           <li><a href="<?= site_url() ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> Home</a></li>
           <li><a href="<?= site_url('about-us') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> About Us</a></li>
           <li><a href="<?= site_url('why-choose-us') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> Why Choose Us</a></li>
-          <li><a href="<?= site_url('our-branches') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> Locations</a></li>
+          <li><a href="<?= site_url('locations') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> Locations</a></li>
           <li><a href="<?= site_url('tracking') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> Track Order</a></li>
           <li><a href="<?= site_url('blog') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> Blog</a></li>
           <li><a href="<?= site_url('faqs') ?>" class="footer-link d-inline-flex align-items-center gap-2 text-decoration-none"><i class="bi bi-chevron-right footer-chevron"></i> FAQs</a></li>

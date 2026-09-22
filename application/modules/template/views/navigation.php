@@ -21,7 +21,7 @@ if (empty($segment1) || $segment1 === 'home' || $class === 'home') {
   'iba-approved-movers'
 ])) {
   $active_tab = 'services';
-} elseif ($class === 'packers_movers' || $segment1 === 'our-branches') {
+} elseif ($class === 'packers_movers' || $segment1 === 'locations' || $segment1 === 'our-branches') {
   $active_tab = 'locations';
 } elseif ($class === 'blog' || $segment1 === 'blog') {
   $active_tab = 'blog';
@@ -40,7 +40,7 @@ $nav_schema = [
     ["@type" => "SiteNavigationElement", "name" => "Home", "url" => site_url()],
     ["@type" => "SiteNavigationElement", "name" => "About Us", "url" => site_url('about-us')],
     ["@type" => "SiteNavigationElement", "name" => "Services", "url" => site_url('our-services')],
-    ["@type" => "SiteNavigationElement", "name" => "Locations", "url" => site_url('our-branches')],
+    ["@type" => "SiteNavigationElement", "name" => "Locations", "url" => site_url('locations')],
     ["@type" => "SiteNavigationElement", "name" => "Blog", "url" => site_url('blog')],
     ["@type" => "SiteNavigationElement", "name" => "Contact Us", "url" => site_url('contact-us')],
     ["@type" => "SiteNavigationElement", "name" => "Track Order", "url" => site_url('tracking')]
@@ -152,7 +152,7 @@ $nav_schema = [
 
           <!-- Locations -->
           <li class="nav-item">
-            <a class="nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>" href="<?= site_url('our-branches') ?>">Locations</a>
+            <a class="nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>" href="<?= site_url('locations') ?>">Locations</a>
           </li>
 
           <!-- Tracking -->
@@ -250,7 +250,7 @@ $nav_schema = [
       </div>
 
       <!-- Locations -->
-      <a href="<?= site_url('our-branches') ?>" class="offcanvas-nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>">
+      <a href="<?= site_url('locations') ?>" class="offcanvas-nav-link <?= $active_tab === 'locations' ? 'active' : '' ?>">
         <span><i class="bi bi-map me-2 offcanvas-icon-primary"></i>Locations</span>
       </a>
 
