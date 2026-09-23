@@ -35,6 +35,26 @@ $state = [
         "category" => "Uttar Pradesh",
         "link" => "uttar-pradesh"
     ],
+    [
+        "image" => "karnataka.jpg",
+        "category" => "Karnataka",
+        "link" => "karnataka"
+    ],
+    [
+        "image" => "delhi.jpg",
+        "category" => "Delhi",
+        "link" => "delhi"
+    ],
+    [
+        "image" => "telangana.jpg",
+        "category" => "Telangana",
+        "link" => "telangana"
+    ],
+    [
+        "image" => "haryana.jpg",
+        "category" => "Haryana",
+        "link" => "haryana"
+    ],
 ];
 ?>
 

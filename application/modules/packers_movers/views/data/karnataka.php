@@ -17,7 +17,7 @@ $cities = array(
 		// array('nm' => 'Bail-Hongal','lat' => '15.81370000','lon' => '74.85895000','sc' => 'KA'),
 		// array('nm' => 'Ballari','lat' => '15.15000000','lon' => '76.55000000','sc' => 'KA'),
 		// array('nm' => 'Bangalore Rural','lat' => '13.22567000','lon' => '77.57501000','sc' => 'KA'),
-		// array('nm' => 'Bangalore','lat' => '13.00000000','lon' => '77.58333000','sc' => 'KA'),
+		array('nm' => 'Bangalore','lat' => '13.00000000','lon' => '77.58333000','sc' => 'KA'),
 		// array('nm' => 'Bangarapet','lat' => '12.99116000','lon' => '78.17804000','sc' => 'KA'),
 		// array('nm' => 'Bannur','lat' => '12.33295000','lon' => '76.86201000','sc' => 'KA'),
 		// array('nm' => 'Bantval','lat' => '12.89050000','lon' => '75.03489000','sc' => 'KA'),
